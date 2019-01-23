@@ -17,10 +17,12 @@ Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7vg) en v
   npm install
   ```
 
+## Inicialización
+
 1. Inicia el servidor
 
 ```
 npm start
 ```
 
-1. Navega a [http://localhost:7777/index.html][http://localhost:7777/index.html].
+1. Navega a [http://localhost:7777/index.html](http://localhost:7777/index.html)
