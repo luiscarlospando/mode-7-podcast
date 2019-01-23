@@ -1,4 +1,4 @@
-# Mode 7 Podcast Live Feed
+# Mode 7 Podcast Scanlines Live Feed
 
 Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7vg) en vivo por YouTube.
 
