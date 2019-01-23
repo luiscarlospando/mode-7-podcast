@@ -1,3 +1,26 @@
 # Mode 7 Podcast Live Feed
 
-Retro video feed made for streaming [Mode 7 Podcast](http://bit.ly/mode7vg) live on YouTube.
+Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7vg) en vivo por YouTube.
+
+## Instalación
+
+1. Clona el repo (o descárgalo) y entra en el directorio
+   
+   ```
+   git clone https://github.com/luiscarlospando/mode7-podcast.git
+   cd mode7-podcast
+   ```
+
+1. Instala las dependencias
+
+  ```
+  npm install
+  ```
+
+1. Inicia el servidor
+
+```
+npm start
+```
+
+1. Navega a [http://localhost:7777/index.html][http://localhost:7777/index.html].
