@@ -4,7 +4,7 @@ Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7vg) en v
 
 ## Instalación
 
-1. Clona el repo (o descárgalo) y entra en el directorio
+1. Clona el repo (o descárgalo) y entra al directorio
    
    ```
    git clone https://github.com/luiscarlospando/mode7-podcast.git
