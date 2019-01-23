@@ -1,4 +1,4 @@
-![Mode 7 Logo](https://github.com/luiscarlospando/mode7-podcast/blob/master/assets/images/logos/white_logo_transparent_background.png)
+![Mode 7 Logo](https://github.com/luiscarlospando/mode7-podcast/blob/master/assets/images/logos/tw_dark_logo_orange_background.png)
 
 # Mode 7 Podcast Scanlines Live Feed
 
