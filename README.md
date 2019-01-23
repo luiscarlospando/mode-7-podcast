@@ -1,3 +1,5 @@
+![Mode 7 Logo](https://github.com/luiscarlospando/mode7-podcast/blob/master/assets/images/logos/white_logo_transparent_background.png)
+
 # Mode 7 Podcast Scanlines Live Feed
 
 Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7vg) en vivo por YouTube.
