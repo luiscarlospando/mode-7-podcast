@@ -14,6 +14,7 @@ body {
 body {
 	position: relative;
 	overflow: hidden;
+	line-height: 3rem;
 }
 
 .noise {
@@ -71,7 +72,7 @@ body {
 }
 
 .main {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	font-family: 'Press Start 2P', cursive;
@@ -79,31 +80,29 @@ body {
 	font-size: 2rem;
 	width: 100vw;
 	height: 100vh;
-	/* background: #2b52ff; */
-	background: url('../images/episodes/001/bg.png') no-repeat;
-	background-size: cover;
+	background-size: cover !important;
+	background-position: center !important;
 }
 
 .main .noise:before {
 	background-size: 150%;
 }
 
-.main .logo {
-	max-width: 12%;
-	-webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
-	filter: blur(1px);
-	position: absolute !important;
-	left: 1.4rem !important;
-	top: 1rem !important;
+.main .video {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.main .vhs {
+.main .video .overlay {
 	position: absolute;
-	left: 12rem;
-    top: 2.4rem;
-	will-change: text-shadow;
-	animation: rgbText 2s steps(9) 0s infinite alternate;
-	text-transform: uppercase;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
 }
 
 .main .vhs .char {
@@ -112,22 +111,53 @@ body {
 	animation-delay: calc(60ms * var(--char-index));
 }
 
-.main .time {
+.main .logo,
+.main .episode,
+.main .live,
+.main .rec,
+.main .discord {
 	position: absolute;
-	right: 2rem;
-	top: 2rem;
 	will-change: text-shadow;
 	animation: rgbText 1s steps(9) 0s infinite alternate;
 	text-transform: uppercase;
 }
 
-.main .counter {
-	position: absolute;
-	left: 2rem;
-	bottom: 2rem;
-	will-change: text-shadow;
-	animation: rgbText 1s steps(9) 0s infinite alternate;
-	text-transform: uppercase;
+.main .logo {
+	max-width: 150px;
+	-webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
+	filter: blur(1px);
+	animation: rgbImage 2s steps(9) 0s infinite alternate;
+	top: 2.5rem;
+	left: 2.5rem;
+}
+
+.main .episode {
+	bottom: 5.5rem; 
+	left: 2.5rem; 
+}
+
+.main .live {
+	right: 2.5rem;
+	top: 2.5rem;
+}
+
+.main .live .fa-circle {
+	color: #ff0000;
+	position: relative;
+	font-size: 1.4rem;
+	top: -9px;
+	left: 11px;
+	display: inline-block;
+}
+
+.main .rec {
+	right: 2.5rem;
+	bottom: 2.5rem;
+}
+
+.main .discord {
+	left: 2.5rem;
+	bottom: 2.5rem;
 }
 
 @keyframes noise {
@@ -220,6 +250,30 @@ body {
 	}
 	100% {
 		text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+	}
+}
+
+@keyframes rgbImage {
+	0% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+	}
+	25% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+	}
+	45% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+	}
+	50% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+	}
+	55% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+	}
+	90% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+	}
+	100% {
+		box-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
 	}
 }
 
