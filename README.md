@@ -4,6 +4,8 @@
 
 Scanlines video feed para streamear [Mode 7 Podcast](http://bit.ly/mode7gg) en vivo por YouTube.
 
+[![Discord](https://img.shields.io/discord/478777821087662092?color=5865f2&label=Discord)](https://discord.gg/N2m8gKw)
+
 ## Instalación
 
 1. Clona el repo (o descárgalo) y entra al directorio
